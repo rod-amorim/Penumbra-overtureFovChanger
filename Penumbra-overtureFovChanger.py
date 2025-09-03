@@ -101,6 +101,14 @@ def convertToRadians(fov:float):
 def convertToDegrees(fov_rad: float):
     return fov_rad * (180 / 3.141592653589793238)
 
+def resource_path(relative_path):
+    try:
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
+
 def main():
     project_root = dirname(dirname(__file__))
 
@@ -116,7 +124,7 @@ def main():
     root.title('Penumbra - Overture - FOV slider'),
     root.wm_attributes('-toolwindow', 'False')
     root.configure(background='#000')
-    root.iconbitmap("icon.ico")
+    root.iconbitmap(resource_path("icon.ico"))
     PenumbraFovOvertureFovSlider(root)
     root.mainloop()
     sys.exit(1)

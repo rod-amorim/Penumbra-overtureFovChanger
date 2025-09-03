@@ -7,8 +7,8 @@ block_cipher = None
 a = Analysis(
     ['Penumbra-overtureFovChanger.py'],
     pathex=[],
-    binaries=[('icon.ico', '.')],
-    datas=[],
+    binaries=[],
+    datas=[('icon.ico', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
