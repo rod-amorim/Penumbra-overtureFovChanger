@@ -25,5 +25,5 @@ The download of the .exe is available in the releases section of this page
 
 # Build your own EXE (only if you choose to clone the repository)
 ```
-python -m PyInstaller --onefile -w -F --add-binary "icon.ico;." --noconsole --icon=icon.ico Penumbra-overtureFovChanger.py
+python -m PyInstaller --onefile -w --noconsole --add-data "icon.ico;." --icon=icon.ico Penumbra-overtureFovChanger.py
 ```
